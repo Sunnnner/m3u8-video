@@ -1,0 +1,54 @@
+﻿<!doctype html>
+<html>
+<meta name="referrer" content="no-referrer" charset="utf-8">  
+	<head>
+	<meta charset="utf-8">
+	<title>Unityhacks Live</title>
+	<style>
+body {
+	background-color: #191919
+}
+.m {
+	width: 960px;
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+}
+.no{
+	text-align:center;
+}
+</style>
+	</head>
+	<body>
+
+  <p style="color:#F00" class="no">If the website does not play the video, please enable the flash plug-in in the address bar.</p>
+
+
+  <div class="m">
+			<script src="https://cdn.jsdelivr.net/hls.js/latest/hls.min.js"></script>
+			<video id="video" controls preload="auto" width="960" height="400"
+		  poster="https://www.unityhacks.com/styles/flatawesomeplus/header/logo.png" data-setup="{}"></video>
+			<script>
+				if(Hls.isSupported()) {
+					var video = document.getElementById('video');
+					var hls = new Hls();
+					hls.loadSource('http://47.94.224.53/hls/ss.m3u8');
+					hls.attachMedia(video);
+					hls.on(Hls.Events.MANIFEST_PARSED,function() {
+						video.play();
+				});
+			 }
+			</script> 
+  </div>
+<p style="color:#F00" class="no">UN实战视频</p>
+<div class="m">
+	<video width="960" height="400" controls="controls">
+  		<source src="http://47.94.224.53/hls/UN.mp4" type="video/mp4" />
+	</video>
+</div>
+<div style="color:#F00">老板们资助我~~</div>
+<div><img src="http://47.94.224.53/images/234.png" style="width:150px"></div>
+<div><img src="http://47.94.224.53/images/345.png"  style="width:150px"></div>
+</body>
+</html>
